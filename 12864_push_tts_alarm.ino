@@ -44,19 +44,19 @@ bool isButtonPressed() {
 
 // WiFi 설정
 const char* ssid = "SACP";
-const char* password = "wjdgns1357";
+const char* password = "password";
 WiFiClient wifiClient;
 
 // OpenWeatherMap 설정
 const char* weatherApiHost = "api.openweathermap.org";                                                     // api 서버 도메인 주소
-String apiKey = "7361f92532927c77b5620a08220d6630";                                                        // 사용자 api
+String apiKey = "api key";                                                        // 사용자 api
 String cityName = "Asan";                                                                                  // 날씨 정보 지역
 String weatherApiPath = "/data/2.5/weather?q=" + cityName + "&appid=" + apiKey + "&lang=kr&units=metric";  // http 요청 경로
 String airPollutionApiPath = "/data/2.5/air_pollution?lat=36.7926&lon=127.0017&appid=" + apiKey;
 
 HttpClient httpClient = HttpClient(wifiClient, weatherApiHost, 80);
 
-const char* pushsaferKey = "1HNGTJv5J3PN0INeyEuR";  // 사용자 api
+const char* pushsaferKey = "api key";  // 사용자 api
 Pushsafer pushsafer(pushsaferKey, wifiClient);      //pushsafer 라이브러리 파일 사용
 
 // NTP 시간
